@@ -85,7 +85,8 @@ const sidebar = {
       children: [
         '/guide/single-file-component',
         '/guide/testing',
-        '/guide/typescript-support'
+        '/guide/typescript-support',
+        '/guide/tooling/deployment'
       ]
     },
     {
