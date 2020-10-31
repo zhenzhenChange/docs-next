@@ -4,7 +4,17 @@
 
 ## Event Names
 
-Unlike components and props, event names don't provide any automatic case transformation. Instead, the name of an emitted event must exactly match the name used to listen to that event. For example, if emitting a camelCased event name:
+Unlike components and props, event names don't provide any automatic case transformation. Instead, the name of an emitted event must exactly match the name used to listen to that event.
+
+```js
+this.$emit('my-event')
+```
+
+```html
+<my-component @my-event="doSomething"></my-component>
+```
+
+If we're emitting a camelCased event name:
 
 ```js
 this.$emit('myEvent')
@@ -33,7 +43,7 @@ app.component('custom-form', {
 })
 ```
 
-When a native event (e.g., `click`) is defined in the `emits` option, the component event will be used __instead__ of a native event listener.
+When a native event (e.g., `click`) is defined in the `emits` option, the component event will be used **instead** of a native event listener.
 
 ::: tip
 It is recommended to define all emitted events in order to better document how a component should work.
@@ -134,12 +144,7 @@ app.component('user-name', {
 })
 ```
 
-<p class="codepen" data-height="300" data-theme-id="39028" data-default-tab="html,result" data-user="Vue" data-slug-hash="GRoPPrM" data-preview="true" data-editable="true" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Multiple v-models">
-  <span>See the Pen <a href="https://codepen.io/team/Vue/pen/GRoPPrM">
-  Multiple v-models</a> by Vue (<a href="https://codepen.io/Vue">@Vue</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<common-codepen-snippet title="Multiple v-models" slug="GRoPPrM" tab="html,result" />
 
 ## Handling `v-model` modifiers
 
