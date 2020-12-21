@@ -6,6 +6,8 @@
 const app = Vue.createApp({})
 
 app.config = {...}
+
+app.mount(...);
 ```
 
 ## errorHandler
@@ -115,7 +117,7 @@ app.mixin({
   hello: 'Vue'
 })
 
-// 'Hello, Vue
+// 'Hello, Vue'
 ```
 
 Define merging strategies for custom options.
